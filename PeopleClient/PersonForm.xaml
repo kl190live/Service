@@ -1,0 +1,32 @@
+﻿<Window x:Class="PeopleClient.PersonForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PeopleClient"
+        mc:Ignorable="d"
+        Title="PersonForm" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Label Content="Név:" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="25px" />
+        <Label Grid.Row="1" Content="Sportol:" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="25px"/>
+        <Label Grid.Row="2" Content="CVV:" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="25px"/>
+
+        <TextBox x:Name="nameInput" Grid.Column="1" VerticalAlignment="Center" Height="25" Width="300"/>
+        <CheckBox x:Name="SportInput" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center"  />
+        <TextBox x:Name="CVVInput" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Height="25" Width="300"/>
+
+        <Button x:Name="addButton" Grid.Column="1" Grid.Row="3" Content="Hozzáad" VerticalAlignment="Top" Margin="0,15,0,0" Click="Add_Click" Width="150px" FontSize="20" />
+        <Button x:Name="updateButton" Visibility="Collapsed" Grid.Column="1" Grid.Row="3" Content="Módosít" VerticalAlignment="Top" Margin="0,15,0,0" Click="Update_Click" Width="150px" FontSize="25px" />
+    </Grid>
+</Window>
