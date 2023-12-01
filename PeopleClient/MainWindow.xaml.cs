@@ -70,7 +70,7 @@ namespace PeopleClient
                 MessageBox.Show("Módosításhoz előbb válasszon ki elemet!");
                 return;
             }
-
+             
             PersonForm personForm = new PersonForm(selected);
             personForm.Closed += (_, _) =>
             {
